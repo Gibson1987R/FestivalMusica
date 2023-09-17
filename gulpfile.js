@@ -3,5 +3,5 @@ function tarea(done) {
 
   done()
 }
-
+//TODO para llamar esto desde node utilizamos npx gulp tarea
 exports.tarea = tarea
