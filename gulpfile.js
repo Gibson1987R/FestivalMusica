@@ -1,10 +1,12 @@
 //todo llamar desde el package.json al gulpfile, const name = require('script')
 const { src, dest, watch } = require('gulp')
 const sass = require('gulp-sass')(require('sass')) //! Requiere instalar gulp-sass para conectar
+const plumber = require('gulp-plumber')
 
 //* Los pasos a hacer dentro de la funcion:
 function css(done) {
   src('src/scss/**/*.scss') // 1 identificar el archivo SASS
+    .pipe(plumber())
     .pipe(sass()) // 2 Complilarlo
     .pipe(dest('build/css')) // 3 Almacenarlo
 
