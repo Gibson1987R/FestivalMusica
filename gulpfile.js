@@ -4,7 +4,7 @@ const sass = require('gulp-sass')(require('sass')) //! Requiere instalar gulp-sa
 
 //* Los pasos a hacer dentro de la funcion:
 function css(done) {
-  src('src/scss/app.scss') // 1 identificar el archivo SASS
+  src('src/scss/**/*.scss') // 1 identificar el archivo SASS
     .pipe(sass()) // 2 Complilarlo
     .pipe(dest('build/css')) // 3 Almacenarlo
 
@@ -12,7 +12,7 @@ function css(done) {
 }
 
 function dev(done) {
-  watch('src/scss/app.scss', css)
+  watch('src/scss/**/*.scss', css)
   done()
 }
 exports.css = css
