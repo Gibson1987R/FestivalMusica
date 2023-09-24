@@ -1,0 +1,43 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+.header {
+  background-color: V.$verde;
+
+  h1 {
+    color: V.$blanco;
+  }
+}
+
+.navegacion-principal {
+  background-color: V.$negro;
+
+  @include M.telefono {
+    background-color: blue;
+  }
+  @include M.table {
+    background-color: red;
+  }
+  @include M.desktop {
+    background-color: purple;
+  }
+  @include M.desktopXL {
+    background-color: brown;
+  }
+
+  a {
+    color: V.$blanco;
+    font-size: 2.4rem;
+
+    &:hover {
+      color: V.$amarillo;
+    }
+  }
+}
+
+/* .prueba {
+  @include M.heading(V.$rosa, true);
+}
+
+.texto {
+  @include M.heading(V.$amarillo);
+} */

@@ -1,0 +1,40 @@
+@use 'variables' as V;
+
+@mixin telefono {
+  @media (min-width: V.$telefono) {
+    @content;
+  }
+}
+@mixin table {
+  @media (min-width: V.$table) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: V.$desktop) {
+    @content;
+  }
+}
+@mixin desktopXL {
+  @media (min-width: V.$desktopXL) {
+    @content;
+  }
+}
+
+//todo Esto fue la explicacion de como una mixin puede ser una funcion de css, que recibe parametros y hasta evalua condicionales
+/* @mixin heading($color: black, $border-radius: false) {
+  text-transform: uppercase;
+  font-size: 5rem;
+  color: $color;
+  letter-spacing: 2px;
+  background-color: V.$morado;
+
+  @if $border-radius {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+  }
+}
+ */
