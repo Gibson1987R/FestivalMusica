@@ -3,6 +3,9 @@
 
 .video {
   position: relative;
+  max-height: 70rem;
+  min-width: 50rem;
+  overflow: hidden;
 
   .overlay {
     position: absolute;
@@ -14,10 +17,38 @@
     );
     height: 100%;
     width: 100%;
+    //todo CENTRADO CUANDO HAY POSICION ABSOLUTA Y RELATIVA
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   video {
-    width: 100%;
     display: block;
+    width: auto;
+
+    @include M.desktop {
+      width: 100%;
+    }
+  }
+}
+
+.contenido-video {
+  //todo Se coloco Z-index, para subir esta clase por encima de la etiqueta de video, casi siempre que se establece position relative y absolut
+  z-index: 1;
+  h2 {
+    color: V.$blanco;
+    font-size: 7rem;
+    margin: 0;
+  }
+
+  p {
+    color: V.$blanco;
+    background-color: V.$rosa;
+    display: inline-block;
+    font-size: 2.4rem;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    margin: 0;
   }
 }
