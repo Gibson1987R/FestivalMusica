@@ -21,6 +21,12 @@
   }
 }
 
+@mixin grid($columnas, $espaciado) {
+  display: grid;
+  grid-template-columns: repeat($columnas, 1fr);
+  gap: $espaciado;
+}
+
 //todo Esto fue la explicacion de como una mixin puede ser una funcion de css, que recibe parametros y hasta evalua condicionales
 /* @mixin heading($color: black, $border-radius: false) {
   text-transform: uppercase;

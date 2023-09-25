@@ -17,7 +17,8 @@ body {
 
 p {
   font-size: 2rem;
-  color: V.$rosa;
+  color: V.$negro;
+  line-height: 1.5;
 }
 
 .contenedor {
@@ -46,4 +47,9 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
