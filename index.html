@@ -38,7 +38,10 @@
   </div>
   <section class="contenedor sobre-festival">
     <div class="imagen">
-      <img src="/img/imagen_vocalista.jpg" alt="Imagen Vocalista Festival" />
+      <picture>
+        <source srcset="build/img/imagen_vocalista.avif" alt="imagen vocalista">
+        <img loading="lazy" width="200" height="300" src="build/img/imagen_vocalista.avif" alt="imagen vocalista">
+      </picture>
     </div>
     <div class="contenido-festival">
       <h2>Rock & EDM Festival</h2>
